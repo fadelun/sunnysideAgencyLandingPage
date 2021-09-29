@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./src/tailwind.css" />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body style="font-size: 18px; box-sizing: border-box" class="font-body font-semibold">
+    <!-- header -->
+    <header style="background-image: url(./images/desktop/image-header.jpg)" class="bg-cover bg-no-repeat bg-top py-4 max-w-full h-screen text-neutral-white">
+      <nav class="flex justify-between px-10">
+        <div class="logo text-3xl tracking-widest">sunnyside</div>
+        <ul class="flex justify-between w-1/4">
+          <li class="mr-4 py-2"><a href="#">About</a></li>
+          <li class="mr-4 py-2"><a href="#">Services</a></li>
+          <li class="mr-4 py-2"><a href="#">Projects</a></li>
+          <li class="rounded-full px-4 py-2 bg-white text-neutral-dark-desaturated font-display"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <main class="flex flex-col justify-evenly items-center h-full">
+        <h1 class="text-5xl text-center font-display uppercase">we are creatives</h1>
+        <img src="./images/icon-arrow-down.svg" alt="icon-arrow-down" height="80px" class="" />
+      </main>
+    </header>
+    <!-- akhir header -->
+
+    <section class="grid grid-cols-4 grid-rows-6">
+      <div class="bg-neutral-white col-span-2 row-span-2 flex flex-col justify-center align-items px-24 py-32 text-neutral-dark-desaturated">
+        <h3 class="font-display text-4xl font-black mb-6">Transform your brand</h3>
+        <p class="text-neutral-dark-grayish mb-6">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+        <a href="#" class="uppercase font-display font-bold">Learn more</a>
+      </div>
+      <div class="bg-blue-400 col-span-2 row-span-2">
+        <img src="./images/desktop/image-transform.jpg" width="100%" />
+      </div>
+      <div class="bg-blue-400 col-span-2 row-span-2">
+        <img src="./images/desktop/image-stand-out.jpg" width="100%" />
+      </div>
+      <div class="bg-neutral-white col-span-2 row-span-2 flex flex-col justify-center align-items px-24 py-32 text-neutral-dark-desaturated">
+        <h3 class="font-display text-3xl font-bold">Stand out to the right audience</h3>
+        <p class="">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div style="background-image: url(./images/desktop/image-graphic-design.jpg); background-size: 100%" class="flex align-items content-end bg-top col-span-2 row-span-2">
+        <div class="content text-darkCyan w-full text-center flex flex-col justify-end items-center">
+          <h3 class="font-display text-3xl font-bold m-2">Graphic Design</h3>
+          <p class="w-2/4 mb-10">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        </div>
+      </div>
+      <div style="background-image: url(./images/desktop/image-photography.jpg); background-size: 100%" class="flex align-items content-end bg-top col-span-2 row-span-2">
+        <div class="content text-darkCyan w-full text-center flex flex-col justify-end items-center">
+          <h3 class="font-display text-3xl font-bold m-2">Photography</h3>
+          <p class="w-2/4 mb-10">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="grid grid-cols-3 grid-rows-2 bg-neutral-white">
+      <div class="col-span-3 flex justify-center items-end">
+        <h2 style="letter-spacing: 0.4rem" class="text-xl text-neutral-dark-grayish font-display uppercase">Client testimonials</h2>
+      </div>
+      <div class="col-span-auto flex flex-col justify-center items-center">
+        <img src="/images/image-emily.jpg" alt="emily R" width="85px" class="rounded-full mb-10" />
+        <div class="description w-3/4 text-center text-neutral-dark-rayish">
+          <p class="mb-12">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+          <p class="font-display text-neutral-dark-desaturated text-2xl">Emily R.</p>
+          <p class="text-neutral-dark-grayish text-sm">Marketing Director</p>
+        </div>
+      </div>
+      <div class="col-span-auto flex flex-col justify-center items-center">
+        <img src="/images/image-thomas.jpg" alt="emily R" width="85px" class="rounded-full mb-10" />
+        <div class="description w-3/4 text-center">
+          <p class="mb-12">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+          <p class="font-display">Thomas S.</p>
+          <p>Chief Operating Officer</p>
+        </div>
+      </div>
+      <div class="col-span-auto">
+        <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+        <p>Jennie F. Business Owner</p>
+      </div>
+    </section>
+
+    <footer>About Services Projects Contact</footer>
+
+    <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
+  </body>
+</html>
