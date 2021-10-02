@@ -3,9 +3,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      height: {
+        "half-screen": "65vh",
+      },
       colors: {
-        softRed: "hsl(7, 99%, 70%)",
-        yellow: "hsl(51, 100%, 49%)",
+        softRed: "hsla(7, 99%, 70%, 0.466)",
+        "red-hover": "hsl(7, 99%, 70%)",
+        yellow: "hsla(51, 100%, 49%, 0.466)",
+        "yellow-hover": "hsl(51, 100%, 49%)",
         dark: "hsl(198, 62%, 26%)", // photography text
         darkCyan: "hsl(167, 40%, 24%)", // graphic design text
         darkCyan02: "hsl(168, 34%, 41%)", // footer

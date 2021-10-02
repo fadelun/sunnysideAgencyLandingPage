@@ -11,94 +11,153 @@
     <title>Frontend Mentor | Sunnyside agency landing page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
-  <body style="font-size: 18px; box-sizing: border-box" class="font-body font-semibold">
+  <body class="font-body font-semibold md:text-lg text-sm">
     <!-- header -->
-    <header style="background-image: url(./images/desktop/image-header.jpg)" class="bg-cover bg-no-repeat bg-top py-4 max-w-full h-screen text-neutral-white">
-      <nav class="flex justify-between px-10">
-        <div class="logo text-3xl tracking-widest">sunnyside</div>
-        <ul class="flex justify-between w-1/4">
-          <li class="mr-4 py-2"><a href="#">About</a></li>
-          <li class="mr-4 py-2"><a href="#">Services</a></li>
-          <li class="mr-4 py-2"><a href="#">Projects</a></li>
-          <li class="rounded-full px-4 py-2 bg-white text-neutral-dark-desaturated font-display"><a href="#">Contact</a></li>
+    <header style="background-image: url(./images/desktop/image-header.jpg)" class="bg-fixed bg-cover bg-no-repeat bg-top py-4 max-w-full md:h-screen h-half-screen text-neutral-white">
+      <nav class="flex justify-between md:px-10 px-0">
+        <div class="logo"><img src="./images/logo.svg" alt="logo" class="cursor-pointer" /></div>
+        <ul class="md:flex justify-between w-1/4 container hidden">
+          <li class="mr-4 py-3"><a href="#">About</a></li>
+          <li class="mr-4 py-3"><a href="#">Services</a></li>
+          <li class="mr-4 py-3"><a href="#">Projects</a></li>
+          <li class="mr-4">
+            <button type="button" class="rounded-full px-4 py-3 bg-white hover:bg-opacity-40 hover:text-white text-neutral-dark-desaturated active:bg-transparent active:text-neutral-white font-display">Contact</button>
+          </li>
         </ul>
+        <img src="./images/icon-hamburger.svg" width="18" alt="icon-hamburger" class="md:hidden block" />
       </nav>
       <main class="flex flex-col justify-evenly items-center h-full">
         <h1 class="text-5xl text-center font-display uppercase">we are creatives</h1>
-        <img src="./images/icon-arrow-down.svg" alt="icon-arrow-down" height="80px" class="" />
+        <a href="#content">
+          <img src="./images/icon-arrow-down.svg" id="arrow" alt="icon-arrow-down" height="80px" class="" />
+        </a>
       </main>
     </header>
     <!-- akhir header -->
 
-    <section class="grid grid-cols-4 grid-rows-6">
-      <div class="bg-neutral-white col-span-2 row-span-2 flex flex-col justify-center align-items px-24 py-32 text-neutral-dark-desaturated">
+    <section id="content" class="flex flex-col md:grid md:grid-cols-4 md:grid-rows-6 grid-cols-1 grid-rows-6">
+      <div class="bg-neutral-white md:col-span-2 md:row-span-2 flex flex-col justify-center align-items md:px-28 px-20 py-32 text-neutral-dark-desaturated md:order-none order-2 md:text-left text-center">
         <h3 class="font-display text-4xl font-black mb-6">Transform your brand</h3>
         <p class="text-neutral-dark-grayish mb-6">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
-        <a href="#" class="uppercase font-display font-bold">Learn more</a>
+        <span class="relative border-b-8 border-yellow hover:border-yellow-hover w-36 rounded">
+          <a href="#" class="absolute -top-4 uppercase font-display font-bold">Learn more</a>
+        </span>
       </div>
-      <div class="bg-blue-400 col-span-2 row-span-2">
-        <img src="./images/desktop/image-transform.jpg" width="100%" />
+      <div class="bg-blue-400 h-30 md:col-span-2 md:row-span-2 row-span-1 md:order-none order-1">
+        <img src="./images/desktop/image-transform.jpg" width="100%" class="" />
       </div>
-      <div class="bg-blue-400 col-span-2 row-span-2">
+      <div class="bg-blue-400 h-30 md:col-span-2 md:row-span-2 md:order-none order-3">
         <img src="./images/desktop/image-stand-out.jpg" width="100%" />
       </div>
-      <div class="bg-neutral-white col-span-2 row-span-2 flex flex-col justify-center align-items px-24 py-32 text-neutral-dark-desaturated">
-        <h3 class="font-display text-3xl font-bold">Stand out to the right audience</h3>
-        <p class="">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
-        <a href="#">Learn more</a>
+      <div class="bg-neutral-white md:col-span-2 md:row-span-2 flex flex-col justify-center align-items md:px-28 px-20 py-32 text-neutral-dark-desaturated md:order-none order-4 md:text-left text-center">
+        <h3 class="font-display text-3xl font-bold mb-6">Stand out to the right audience</h3>
+        <p class="text-neutral-dark-grayish mb-6">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+        <span class="relative border-b-8 border-softRed hover:border-red-hover w-36 rounded">
+          <a href="#" class="absolute -top-4 uppercase font-display font-bold">Learn more</a>
+        </span>
       </div>
-      <div style="background-image: url(./images/desktop/image-graphic-design.jpg); background-size: 100%" class="flex align-items content-end bg-top col-span-2 row-span-2">
+      <div id="graphic-design" style="background-image: url(./images/desktop/image-graphic-design.jpg); background-size: 100%" class="flex h-30 align-items content-end bg-top md:col-span-2 md:row-span-2 md:order-none order-5">
         <div class="content text-darkCyan w-full text-center flex flex-col justify-end items-center">
           <h3 class="font-display text-3xl font-bold m-2">Graphic Design</h3>
-          <p class="w-2/4 mb-10">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+          <p class="w-2/4 md:mb-10 mb-4">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
         </div>
       </div>
-      <div style="background-image: url(./images/desktop/image-photography.jpg); background-size: 100%" class="flex align-items content-end bg-top col-span-2 row-span-2">
+      <div id="photography" style="background-image: url(./images/desktop/image-photography.jpg); background-size: 100%" class="flex h-30 align-items content-end bg-top md:col-span-2 md:row-span-2 md:order-none order-6">
         <div class="content text-darkCyan w-full text-center flex flex-col justify-end items-center">
           <h3 class="font-display text-3xl font-bold m-2">Photography</h3>
-          <p class="w-2/4 mb-10">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+          <p class="w-2/4 md:mb-10 mb-4">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
         </div>
       </div>
     </section>
 
-    <section id="testimonials" class="grid grid-cols-3 grid-rows-2 bg-neutral-white">
-      <div class="col-span-3 flex justify-center items-end">
-        <h2 style="letter-spacing: 0.4rem" class="text-xl text-neutral-dark-grayish font-display uppercase">Client testimonials</h2>
+    <!-- testimonials -->
+    <section id="testimonials" class="md:grid md:grid-cols-3 md:grid-rows-2 flex flex-col bg-neutral-white text-neutral-dark-rayish md:mb-48">
+      <div class="md:col-span-3 flex justify-center items-end md:pb-16 py-16">
+        <h2 style="letter-spacing: 0.4rem" class="text-2xl text-neutral-dark-grayish font-display uppercase">Client testimonials</h2>
       </div>
-      <div class="col-span-auto flex flex-col justify-center items-center">
-        <img src="/images/image-emily.jpg" alt="emily R" width="85px" class="rounded-full mb-10" />
-        <div class="description w-3/4 text-center text-neutral-dark-rayish">
+      <div class="md:col-span-auto flex flex-col justify-center items-center md:pb-0 pb-16">
+        <img src="/images/image-emily.jpg" alt="Emily R." width="85px" class="rounded-full mb-10" />
+        <div class="description w-3/4 text-center">
           <p class="mb-12">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-          <p class="font-display text-neutral-dark-desaturated text-2xl">Emily R.</p>
-          <p class="text-neutral-dark-grayish text-sm">Marketing Director</p>
+          <p class="font-display text-neutral-dark-desaturated text-2xl mb-3">Emily R.</p>
+          <p class="text-neutral-dark-grayish text-md">Marketing Director</p>
         </div>
       </div>
-      <div class="col-span-auto flex flex-col justify-center items-center">
-        <img src="/images/image-thomas.jpg" alt="emily R" width="85px" class="rounded-full mb-10" />
+      <div class="md:col-span-auto flex flex-col justify-center items-center md:pb-0 pb-16">
+        <img src="/images/image-thomas.jpg" alt="Thomas S." width="85px" class="rounded-full mb-10" />
         <div class="description w-3/4 text-center">
           <p class="mb-12">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
-          <p class="font-display">Thomas S.</p>
-          <p>Chief Operating Officer</p>
+          <p class="font-display text-neutral-dark-desaturated text-2xl mb-3">Thomas S.</p>
+          <p class="text-neutral-dark-grayish text-md">Chief Operating Officer</p>
         </div>
       </div>
-      <div class="col-span-auto">
-        <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
-        <p>Jennie F. Business Owner</p>
+      <div class="md:col-span-auto flex flex-col justify-center items-center md:pb-0 pb-16">
+        <img src="/images/image-jennie.jpg" alt="Jennie F." width="85px" class="rounded-full mb-10" />
+        <div class="description w-3/4 text-center">
+          <p class="mb-12">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+          <p class="font-display text-neutral-dark-desaturated text-2xl mb-3">Jennie F.</p>
+          <p class="text-neutral-dark-grayish text-md">Business Owner</p>
+        </div>
       </div>
     </section>
+    <!-- akhir testimonials -->
 
-    <footer>About Services Projects Contact</footer>
+    <!-- gallery -->
+    <section id="gallery">
+      <ul class="grid md:grid-cols-4 grid-cols-2">
+        <li><img src="./images/desktop/image-gallery-milkbottles.jpg" alt="milk bottles" /></li>
+        <li><img src="./images/desktop/image-gallery-orange.jpg" alt="orange" /></li>
+        <li><img src="./images/desktop/image-gallery-cone.jpg" alt="cone" /></li>
+        <li><img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="sugarcubes" /></li>
+      </ul>
+    </section>
+    <!-- akhir gallery -->
 
-    <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
+    <footer style="background: rgba(145, 211, 197, 255)" class="text-darkCyan flex flex-col items-center pt-24 pb-16">
+      <h4 class="text-4xl font-semibold mb-7">sunnyside</h4>
+      <ul class="md:w-1/4 w-full flex justify-around mb-24">
+        <li><a href="#" class="hover:text-white">About</a></li>
+        <li><a href="#" class="hover:text-white">Services</a></li>
+        <li><a href="#" class="hover:text-white">Projects</a></li>
+      </ul>
+      <ul class="md:w-1/5 w-full flex justify-evenly mb-20">
+        <a href="#"><img src="./images/icon-facebook.svg" alt="facebook" class="hover:text-white" /> </a>
+        <a href="#"><img src="./images/icon-instagram.svg" alt="instagram" class="hover:text-white" /> </a>
+        <a href="#"><img src="./images/icon-twitter.svg" alt="twitter" class="hover:text-white" /> </a>
+        <a href="#"><img src="./images/icon-pinterest.svg" alt="pintrest" class="hover:text-white" /> </a>
+      </ul>
+      <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
+    </footer>
+
+    <script>
+      const imgDesign = document.getElementById("graphic-design");
+      const photography = document.getElementById("photography");
+
+      setInterval(function () {
+        if (window.innerWidth < 768) {
+          imgDesign.style.height = "27rem";
+          photography.style.height = "27rem";
+        } else {
+          imgDesign.style.height = "auto";
+          photography.style.height = "auto";
+        }
+
+        if (window.innerWidth < 530) {
+          imgDesign.style.backgroundSize = "140%";
+          photography.style.backgroundSize = "140%";
+        } else {
+          imgDesign.style.backgroundSize = "100%";
+          photography.style.backgroundSize = "100%";
+        }
+      }, 100);
+
+      // const down = document.querySelector("img#arrow");
+
+      // down.addEventListener("click", () => {
+      //   window.scrollTo(0, 800);
+      //   aniam
+      // });
+    </script>
   </body>
 </html>
