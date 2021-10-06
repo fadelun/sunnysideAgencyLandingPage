@@ -10,22 +10,43 @@
 
     <title>Frontend Mentor | Sunnyside agency landing page</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      #navbar::after {
+        content: " ";
+        position: absolute;
+        top: -20px;
+        right: 0px;
+        border: 20px solid transparent;
+        border-right: 20px solid white;
+        border-bottom: 20px solid white;
+      }
+    </style>
   </head>
   <body class="font-body font-semibold md:text-lg text-sm">
     <!-- header -->
-    <header style="background-image: url(./images/desktop/image-header.jpg)" class="bg-fixed bg-cover bg-no-repeat bg-top py-4 max-w-full md:h-screen h-half-screen text-neutral-white">
-      <nav class="flex justify-between md:px-10 px-0">
+    <header style="background-image: url(./images/desktop/image-header.jpg)" class="bg-fixed bg-cover bg-no-repeat bg-top py-4 md:h-screen h-half-screen text-neutral-white">
+      <nav class="flex justify-between md:px-4 px-2">
         <div class="logo"><img src="./images/logo.svg" alt="logo" class="cursor-pointer" /></div>
-        <ul class="md:flex justify-between w-1/4 container hidden">
-          <li class="mr-4 py-3"><a href="#">About</a></li>
-          <li class="mr-4 py-3"><a href="#">Services</a></li>
-          <li class="mr-4 py-3"><a href="#">Projects</a></li>
+        <ul class="md:flex justify-between items-center xl:w-1/4 w-2/5 hidden">
+          <li class="mr-4"><a href="#">About</a></li>
+          <li class="mr-4"><a href="#">Services</a></li>
+          <li class="mr-4"><a href="#">Projects</a></li>
           <li class="mr-4">
-            <button type="button" class="rounded-full px-4 py-3 bg-white hover:bg-opacity-40 hover:text-white text-neutral-dark-desaturated active:bg-transparent active:text-neutral-white font-display">Contact</button>
+            <button type="button" class="rounded-full px-4 py-3 bg-white hover:bg-opacity-40 hover:text-white text-neutral-dark-desaturated font-display">Contact</button>
           </li>
         </ul>
-        <img src="./images/icon-hamburger.svg" width="18" alt="icon-hamburger" class="md:hidden block" />
+
+        <!-- mobile version -->
+        <img id="hamburger" src="./images/icon-hamburger.svg" width="30" alt="icon-hamburger" class="md:hidden block cursor-pointer" />
+        <ul id="navbar" class="hidden absolute bg-white text-xl top-20 left-4 right-4 text-gray-800 flex-col items-center">
+          <li class="my-4"><a href="#">About</a></li>
+          <li class="my-4"><a href="#">Services</a></li>
+          <li class="my-4"><a href="#">Projects</a></li>
+          <li class="my-4">
+            <button type="button" class="rounded-full px-4 py-3 bg-yellow-hover text-neutral-dark-desaturated font-display">Contact</button>
+          </li>
+        </ul>
+        <!-- akhir mobile version -->
       </nav>
       <main class="flex flex-col justify-evenly items-center h-full">
         <h1 class="text-5xl text-center font-display uppercase">we are creatives</h1>
@@ -37,24 +58,24 @@
     <!-- akhir header -->
 
     <section id="content" class="flex flex-col md:grid md:grid-cols-4 md:grid-rows-6 grid-cols-1 grid-rows-6">
-      <div class="bg-neutral-white md:col-span-2 md:row-span-2 flex flex-col justify-center align-items md:px-28 px-20 py-32 text-neutral-dark-desaturated md:order-none order-2 md:text-left text-center">
+      <div class="bg-neutral-white md:col-span-2 md:row-span-2 flex flex-col justify-center md:items-start items-center md:px-28 px-20 py-32 text-neutral-dark-desaturated md:order-none order-2 md:text-left text-center">
         <h3 class="font-display text-4xl font-black mb-6">Transform your brand</h3>
         <p class="text-neutral-dark-grayish mb-6">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
         <span class="relative border-b-8 border-yellow hover:border-yellow-hover w-36 rounded">
-          <a href="#" class="absolute -top-4 uppercase font-display font-bold">Learn more</a>
+          <a href="#" class="md:absolute md:-top-4 uppercase font-display font-bold">Learn more</a>
         </span>
       </div>
       <div class="bg-blue-400 h-30 md:col-span-2 md:row-span-2 row-span-1 md:order-none order-1">
-        <img src="./images/desktop/image-transform.jpg" width="100%" class="" />
+        <img id="image-content" src="./images/desktop/image-transform.jpg" width="140%" />
       </div>
       <div class="bg-blue-400 h-30 md:col-span-2 md:row-span-2 md:order-none order-3">
-        <img src="./images/desktop/image-stand-out.jpg" width="100%" />
+        <img id="image-content" src="./images/desktop/image-stand-out.jpg" width="140%" />
       </div>
-      <div class="bg-neutral-white md:col-span-2 md:row-span-2 flex flex-col justify-center align-items md:px-28 px-20 py-32 text-neutral-dark-desaturated md:order-none order-4 md:text-left text-center">
+      <div class="bg-neutral-white md:col-span-2 md:row-span-2 flex flex-col justify-center md:items-start items-center md:px-28 px-20 py-32 text-neutral-dark-desaturated md:order-none order-4 md:text-left text-center">
         <h3 class="font-display text-3xl font-bold mb-6">Stand out to the right audience</h3>
         <p class="text-neutral-dark-grayish mb-6">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
         <span class="relative border-b-8 border-softRed hover:border-red-hover w-36 rounded">
-          <a href="#" class="absolute -top-4 uppercase font-display font-bold">Learn more</a>
+          <a href="#" class="md:absolute md:-top-4 uppercase font-display font-bold">Learn more</a>
         </span>
       </div>
       <div id="graphic-design" style="background-image: url(./images/desktop/image-graphic-design.jpg); background-size: 100%" class="flex h-30 align-items content-end bg-top md:col-span-2 md:row-span-2 md:order-none order-5">
@@ -74,7 +95,7 @@
     <!-- testimonials -->
     <section id="testimonials" class="md:grid md:grid-cols-3 md:grid-rows-2 flex flex-col bg-neutral-white text-neutral-dark-rayish md:mb-48">
       <div class="md:col-span-3 flex justify-center items-end md:pb-16 py-16">
-        <h2 style="letter-spacing: 0.4rem" class="text-2xl text-neutral-dark-grayish font-display uppercase">Client testimonials</h2>
+        <h2 style="letter-spacing: 0.4rem" class="md:text-2xl text-sm text-center text-neutral-dark-grayish font-display uppercase">Client testimonials</h2>
       </div>
       <div class="md:col-span-auto flex flex-col justify-center items-center md:pb-0 pb-16">
         <img src="/images/image-emily.jpg" alt="Emily R." width="85px" class="rounded-full mb-10" />
@@ -116,16 +137,16 @@
 
     <footer style="background: rgba(145, 211, 197, 255)" class="text-darkCyan flex flex-col items-center pt-24 pb-16">
       <h4 class="text-4xl font-semibold mb-7">sunnyside</h4>
-      <ul class="md:w-1/4 w-full flex justify-around mb-24">
+      <ul class="md:w-1/4 md:text-base text-2xl w-full flex justify-around mb-24">
         <li><a href="#" class="hover:text-white">About</a></li>
         <li><a href="#" class="hover:text-white">Services</a></li>
         <li><a href="#" class="hover:text-white">Projects</a></li>
       </ul>
       <ul class="md:w-1/5 w-full flex justify-evenly mb-20">
-        <a href="#"><img src="./images/icon-facebook.svg" alt="facebook" class="hover:text-white" /> </a>
-        <a href="#"><img src="./images/icon-instagram.svg" alt="instagram" class="hover:text-white" /> </a>
-        <a href="#"><img src="./images/icon-twitter.svg" alt="twitter" class="hover:text-white" /> </a>
-        <a href="#"><img src="./images/icon-pinterest.svg" alt="pintrest" class="hover:text-white" /> </a>
+        <a href="#"><img src="./images/icon-facebook.svg" width="28" alt="facebook" class="hover:text-white" /> </a>
+        <a href="#"><img src="./images/icon-instagram.svg" width="28" alt="instagram" class="hover:text-white" /> </a>
+        <a href="#"><img src="./images/icon-twitter.svg" width="28" alt="twitter" class="hover:text-white" /> </a>
+        <a href="#"><img src="./images/icon-pinterest.svg" width="28" alt="pintrest" class="hover:text-white" /> </a>
       </ul>
       <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
     </footer>
@@ -133,6 +154,8 @@
     <script>
       const imgDesign = document.getElementById("graphic-design");
       const photography = document.getElementById("photography");
+      const btnNav = document.getElementById("hamburger");
+      const navbar = document.getElementById("navbar");
 
       setInterval(function () {
         if (window.innerWidth < 768) {
@@ -152,12 +175,15 @@
         }
       }, 100);
 
-      // const down = document.querySelector("img#arrow");
+      btnNav.addEventListener("click", () => {
+        if (navbar.classList.contains("hidden")) {
+          navbar.classList.remove("hidden");
+        } else {
+          navbar.classList.add("hidden");
+        }
 
-      // down.addEventListener("click", () => {
-      //   window.scrollTo(0, 800);
-      //   aniam
-      // });
+        navbar.classList.toggle("flex");
+      });
     </script>
   </body>
 </html>
