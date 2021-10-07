@@ -4,7 +4,7 @@
 @tailwind base;
 
 @layer base {
-  img#image-content {
+  img.image-content {
     @apply h-full;
   }
 }

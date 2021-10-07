@@ -561,7 +561,7 @@ video {
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
 
-img#image-content {
+img.image-content {
   height: 100%;
 }
 
